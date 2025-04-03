@@ -1,0 +1,31 @@
+{
+  "name": "@uncached/storage-adapter-indexeddb",
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "bun run --no-clear-screen --no-bundle ./scripts/build.ts",
+    "dev": "bun --watch run ./scripts/build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5",
+    "@uncached/core": "workspace:*"
+  },
+  "dependencies": {
+    "idb": "^8.0.2"
+  }
+}

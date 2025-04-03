@@ -1,0 +1,28 @@
+{
+  "name": "@uncached/core",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun run --no-clear-screen --no-bundle ./scripts/build.ts",
+    "dev": "bun --watch run ./scripts/build.ts"
+  },
+  "source": "src/index.ts",
+  "type": "module"
+}

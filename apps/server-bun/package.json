@@ -1,0 +1,15 @@
+{
+  "name": "server-bun",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.7.5",
+    "@uncached/core": "workspace:*",
+    "@uncached/storage-adapter-bun-file": "workspace:*",
+    "@uncached/storage-adapter-bun-sqlite": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

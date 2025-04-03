@@ -1,0 +1,23 @@
+{
+  "name": "@uncached/storage-adapter-bun-sqlite",
+  "type": "module",
+  "version": "0.0.1",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "main": "./src/index.ts",
+  "source": "src/index.ts",
+  "scripts": {
+    "build": "bun run --no-clear-screen --no-bundle ./scripts/build.ts",
+    "dev": "bun --watch run ./scripts/build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5",
+    "@uncached/core": "workspace:*"
+  }
+}

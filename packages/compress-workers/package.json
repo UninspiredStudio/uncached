@@ -1,0 +1,36 @@
+{
+  "name": "@uncached/compress-workers",
+  "version": "0.0.1",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./worker": {
+      "import": "./dist/esm/worker.js",
+      "require": "./dist/cjs/worker.js",
+      "types": "./dist/types/worker.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "bun run --no-clear-screen --no-bundle ./scripts/build.ts",
+    "dev": "bun --watch run ./scripts/build.ts"
+  },
+  "source": "src/index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "lz-string": "^1.5.0"
+  }
+}
