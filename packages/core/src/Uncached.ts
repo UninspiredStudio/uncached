@@ -93,6 +93,8 @@ export interface UncachedOptions {
   compressionAdapter?: CompressionAdapter;
 }
 
+console.log("test");
+
 type ISetOverload = {
   <T extends CacheValue = CacheValue>(
     key: CacheKey,
